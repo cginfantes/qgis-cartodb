@@ -183,7 +183,7 @@ class CartoDBPluginLayer(QgsVectorLayer):
     def _updateAttributes(self, changedAttributeValues):
         provider = self.dataProvider()
         for featureID, v in changedAttributeValues.iteritems():
-            QgsMessageLog.logMessage('Update attributes for feature ID: ' + str(featureID), 'CartoDB Plugin', QgsMessageLog.INFO)
+            QgsMessageLog.logMessage('Actualizado  attributes for feature ID: ' + str(featureID), 'CartoDB Plugin', QgsMessageLog.INFO)
             sql = "UPDATE " + self.cartoTable + " SET "
             request = QgsFeatureRequest().setFilterFid(featureID)
             try:
